@@ -3,21 +3,21 @@
 #include "Transactie.h"
 
 #include <vector>
+#include <string>
 using namespace std;
 
 class Bankrekening
 {
 public:
-	Bankrekening(float saldo, vector<Transactie> b_transacties);
+	Bankrekening(float saldo, vector<string> b_transacties);
 	~Bankrekening();
 
 	float getSaldo() const;
-	vector<float> getTransactions() const;
+	//vector<string> getTransactions() const;
 
 	Bankrekening operator+(const Transactie& transactie) const;
-	Bankrekening operator-(const Transactie& transactie) const;
 
 private:
 	float saldo;
-	vector<Transactie> b_transacties;
+	vector<string> b_transacties;
 };

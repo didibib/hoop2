@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Bankrekening.h"
 
-Bankrekening::Bankrekening(float saldo, vector<Transactie> b_transacties)
+Bankrekening::Bankrekening(float saldo, vector<string> b_transacties)
 {
 	this->saldo = saldo;
 	this->b_transacties = b_transacties;
@@ -13,16 +13,17 @@ float Bankrekening::getSaldo() const {
 	return saldo;
 }
 
-vector<float> Bankrekening::getTransactions() const {
-	//return b_transacties;
-}
+//vector<string> Bankrekening::getTransactions() const {
+//	return b_transacties;
+//}
 
 Bankrekening Bankrekening::operator+(const Transactie& transactie) const
 {
-	return Bankrekening(saldo + transactie.bedrag, b_transacties.push_back(transactie));
-}
-
-Bankrekening Bankrekening::operator-(const Transactie& transactie) const
-{
-	return Bankrekening(saldo - transactie.bedrag, b_transacties.push_back(transactie));
+	if (transactie.actie == "bij") {
+		return Bankrekening(saldo + transactie.bedrag, b_transacties.push_back());
+	}
+	if (transactie.actie == "af") {
+		return Bankrekening(saldo - transactie.bedrag, b_transacties.push_back(transactie));
+	}
+	
 }
