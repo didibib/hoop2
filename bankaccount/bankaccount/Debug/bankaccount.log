@@ -1,6 +1,5 @@
-﻿  Transactie.cpp
-  Bankrekening.cpp
-  Generating Code...
-c:\users\tariq bakhtali\desktop\of_v0.9.7\apps\hoop2\bankaccount\bankaccount\bankrekening.cpp(26): warning C4715: 'Bankrekening::operator+': not all control paths return a value
+﻿  Bankrekening.cpp
+c:\users\tariq bakhtali\desktop\of_v0.9.7\apps\hoop2\bankaccount\bankaccount\bankrekening.cpp(32): warning C4018: '<': signed/unsigned mismatch
+c:\users\tariq bakhtali\desktop\of_v0.9.7\apps\hoop2\bankaccount\bankaccount\bankrekening.cpp(24): warning C4715: 'Bankrekening::operator+': not all control paths return a value
   bankaccount.vcxproj -> C:\Users\Tariq Bakhtali\Desktop\of_v0.9.7\apps\HOOP2\bankaccount\Debug\bankaccount.exe
   bankaccount.vcxproj -> C:\Users\Tariq Bakhtali\Desktop\of_v0.9.7\apps\HOOP2\bankaccount\Debug\bankaccount.pdb (Full PDB)
