@@ -9,15 +9,13 @@ using namespace std;
 class Bankrekening
 {
 public:
-	Bankrekening(float saldo, vector<string> b_transacties);
+	Bankrekening(float saldo, vector<Transactie> b_transacties);
 	~Bankrekening();
 
-	float getSaldo() const;
-	//vector<string> getTransactions() const;
+	Bankrekening operator+(const Transactie& transactie);
+	friend ostream& operator<<(ostream& os, Bankrekening bankrekening);
 
-	Bankrekening operator+(const Transactie& transactie) const;
-
-private:
 	float saldo;
-	vector<string> b_transacties;
+	vector<Transactie> b_transacties;
+	//string error = "false transaction";
 };

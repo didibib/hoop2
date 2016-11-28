@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "ShippingContainer.h"
+#include <iostream>
 
 using namespace std;
 
@@ -18,6 +19,9 @@ public:
 	int getNumberOfContainers() const;
 
 	ContainerShip operator+(const ShippingContainer& container) const;
+	ContainerShip& operator+=(const ShippingContainer& container); // kan geen const zijn want we veranderen iets aan ons zelf
+
+	ContainerShip& operator=(const ContainerShip& ship);
 
 private:
 	string name;

@@ -1,5 +1,6 @@
 #include "stdafx.h"
 
+#include <string>
 #include <iostream>
 #include "ContainerShip.h"
 #include "ShippingContainer.h"
@@ -17,6 +18,13 @@ int main() {
 	ship = ship + container1;
 
 	cout << ship.getName() << " load=" << ship.getLoad() << endl;
+
+	ship += container2;
+
+	cout << ship.getName() << " load=" << ship.getLoad() << endl;
+
+	string in;
+	cin >> in;
 
 	return 0;
 }
