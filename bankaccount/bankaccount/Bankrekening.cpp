@@ -23,6 +23,11 @@ Bankrekening Bankrekening::operator+(const Transactie& transactie) {
 	}
 }
 
+Bankrekening& Bankrekening::operator+=(const Transactie& transactie) {
+	saldo = saldo + transactie.bedrag;
+	return *this;
+}
+
 ostream& operator<<(ostream& os, Bankrekening bankrekening) {
 	os << "#bankrekening.json" << endl;
 	os << endl;

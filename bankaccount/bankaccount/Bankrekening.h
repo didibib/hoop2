@@ -13,6 +13,9 @@ public:
 	~Bankrekening();
 
 	Bankrekening operator+(const Transactie& transactie);
+	Bankrekening& operator+=(const Transactie& transactie); // += : compound operator
+	Bankrekening& operator=(const Bankrekening& bankrekening);
+
 	friend ostream& operator<<(ostream& os, Bankrekening bankrekening);
 
 	float saldo;

@@ -20,4 +20,3 @@ private:
 	vector<string> values;
 	const string& NOKEY = "NOSUCHKEY";
 };
-

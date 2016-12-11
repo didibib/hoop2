@@ -24,4 +24,4 @@ int main()
 }
 
 // obj* obj1
-// obj->meth() / (*obj).meth() 
+// obj->meth() / (*obj).meth() derefencen
