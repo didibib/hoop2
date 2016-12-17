@@ -7,7 +7,7 @@ using namespace std;
 
 class Child {
 public:
-	Child();
+	Child(string name);
 	Child(const Child& other);
 	Child& operator=(const Child& child);
 

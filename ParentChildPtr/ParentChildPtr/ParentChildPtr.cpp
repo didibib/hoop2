@@ -6,16 +6,20 @@
 
 int main()
 {
-	Parent parent = Parent("parent");
-	cout << parent << endl;
+	Parent* mom = new Parent("mom");
+	cout << *mom << endl;
 
-	Child child = Child();
-	child.name = "one";	
-	cout << child << endl;
+	Parent* dad = new Parent("dad");
+	cout << *dad << endl;
 
-	parent.child = &child; // VRAAG: waarom ook alweer & ?
+	Child* child = new Child("pro");
+	cout << *child << endl;
 
-	cout << parent << endl;
+	*mom = *dad;
+	cout << *mom << endl;
+
+	*mom->child = *child;
+	cout << *mom << endl;
 
 	string in;
 	cin >> in;

@@ -2,7 +2,8 @@
 #include "Child.h"
 
 
-Child::Child() {
+Child::Child(string name) {
+	this->name = name;
 }
 
 Child::Child(const Child& other)
@@ -20,6 +21,6 @@ Child& Child::operator=(const Child& child)
 
 ostream& operator<<(ostream& os, const Child& child)
 {
-	os << child.name << endl;
+	os << "Child: " << child.name << endl;
 	return os;
 }
