@@ -46,7 +46,6 @@ string peek(vector<T> vec) {
 }
 */
 
-/*
 template <typename T>
 ostream& operator<<(ostream& os, vector<T>& vec) {
 	for (size_t i = 0; i < vec.size() + 1; ++i) {
@@ -54,24 +53,27 @@ ostream& operator<<(ostream& os, vector<T>& vec) {
 	}
 	return os;
 }
-*/
 
 stack<int> collectorInt;
 
 int main()
 {
-	//for (int i : {3, 6, 1, 7}) {
-		collectorInt.push(1);
-	//}
+	for (int i : {3, 6, 1, 7}) {
+		collectorInt.push(i);
+	}
+
+	cout << "printing list" << endl;
+	collectorInt.print();
 	
+	cout << "peeking head" << endl;
 	cout << collectorInt.peek() << endl;
 
-	/*
-	stack<int> vectorInt;
-	for (int i : {1, 3, 4, 2}) {
-		vectorInt.push(i);
-	}
-	*/
+	cout << "deleting head" << endl;
+	collectorInt.pop();
+	cout << collectorInt.peek() << endl;
+	
+	string in;
+	cin >> in;
 
 	return 0;
 }

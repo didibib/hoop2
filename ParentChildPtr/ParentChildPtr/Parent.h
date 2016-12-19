@@ -10,8 +10,8 @@ using namespace std;
 class Parent {
 public:
 	Parent(string name); 
-	Parent(const Parent& other);
-	Parent& operator=(const Parent& other);
+	Parent(const Parent& parent);
+	Parent& operator=(const Parent& parent);
 
 	Child* child;
 

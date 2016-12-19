@@ -10,25 +10,16 @@ class stack
 {
 public:
 	void push(T input) {
-		if (collector.empty()) {
-			collector[0] = input;
-		}
-		else {
-			int s = collector.size() + 1;
-			collector.resize(s);
-			collector[s] = input;
-		}
+		collector.push_back(input);
 	}
 
 	void pop() {
-		if (collector.empty()) {
-			cout << "list is empty" << endl;
-		}
-		else {
-			collector[0].delete;
-			for (int i = 0; i < collector.size(); i++) {
-				collector[i] = collector[i + 1];
-			}
+		collector.erase(collector.begin());
+	}
+
+	void print() {
+		for (vector<T>::iterator i = collector.begin(); i != collector.end(); i++) {
+			cout << *i << endl;
 		}
 	}
 

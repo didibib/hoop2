@@ -12,16 +12,14 @@ Parent::Parent(const Parent& parent)
 	this->child = parent.child;
 }
 
-Parent& Parent::operator=(const Parent &parent)
+Parent& Parent::operator=(const Parent& parent)
 {
-	if (this != &parent) {
-		this->name = parent.name;
-		this->child = new Child(parent.child->name);
+	if (this->child) {
+		delete this->child;
 	}
-	else {
-		cout << "you are self assigning" << endl;
-	}
-	
+
+	this->name = parent.name;
+	this->child = new Child(parent.child->name);
 
 	return *this;
 }
@@ -29,6 +27,6 @@ Parent& Parent::operator=(const Parent &parent)
 ostream& operator<<(ostream& os, const Parent& parent)
 {
 	//os << "Parent " << parent.name << endl;
-	os << "Parent: " << parent.name << " Child: " << parent.child->name << endl;
+	os << "Parent: " << &parent << parent.name << " Child: " << parent.child <<parent.child->name << endl;
 	return os;
 }

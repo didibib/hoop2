@@ -1,1 +1,4 @@
-﻿LINK : fatal error LNK1168: cannot open C:\Users\Tariq Bakhtali\Desktop\of_v0.9.8_vs_release\apps\HOOP2\ParentChildPtr\Debug\ParentChildPtr.exe for writing
+﻿cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+  Parent.cpp
+  ParentChildPtr.vcxproj -> C:\Users\Tariq Bakhtali\Desktop\of_v0.9.8_vs_release\apps\HOOP2\ParentChildPtr\Debug\ParentChildPtr.exe
+  ParentChildPtr.vcxproj -> C:\Users\Tariq Bakhtali\Desktop\of_v0.9.8_vs_release\apps\HOOP2\ParentChildPtr\Debug\ParentChildPtr.pdb (Full PDB)
