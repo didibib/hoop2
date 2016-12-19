@@ -8,6 +8,7 @@
 
 using namespace std;
 
+/*
 template <typename T>
 vector<T> push(vector<T> vec, T input) {
 	if (vec.empty()) {
@@ -43,6 +44,7 @@ string peek(vector<T> vec) {
 	}
 	return head;
 }
+*/
 
 /*
 template <typename T>
@@ -54,12 +56,15 @@ ostream& operator<<(ostream& os, vector<T>& vec) {
 }
 */
 
+stack<int> collectorInt;
+
 int main()
 {
-	vector<string> vectorString;
-	push<string>(vectorString, "01");
-
-	cout << peek(vectorString) << endl;	
+	//for (int i : {3, 6, 1, 7}) {
+		collectorInt.push(1);
+	//}
+	
+	cout << collectorInt.peek() << endl;
 
 	/*
 	stack<int> vectorInt;

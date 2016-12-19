@@ -5,18 +5,23 @@ Parent::Parent(string name) {
 	this->name = name;
 }
 
-Parent::Parent(const Parent & other)
+Parent::Parent(const Parent& parent)
 {
+	cout << "parent copyctor" << endl;
+	this->name = parent.name;
+	this->child = parent.child;
 }
 
-Parent& Parent::operator=(const Parent& other)
+Parent& Parent::operator=(const Parent &parent)
 {
-	if (this->child == other.child) {
-		delete this->child;
+	if (this != &parent) {
+		this->name = parent.name;
+		this->child = new Child(parent.child->name);
 	}
-
-	this->name = other.name;
-	this->child = new Child(other.child->name);
+	else {
+		cout << "you are self assigning" << endl;
+	}
+	
 
 	return *this;
 }

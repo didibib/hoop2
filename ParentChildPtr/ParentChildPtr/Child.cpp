@@ -8,7 +8,7 @@ Child::Child(string name) {
 
 Child::Child(const Child& other)
 {
-	cout << "child cctor" << endl;
+	cout << "child copyctor" << endl;
 	this->name = other.name;
 }
 
