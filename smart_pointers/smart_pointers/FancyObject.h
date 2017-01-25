@@ -13,6 +13,6 @@ public:
 	virtual ~FancyObject();
 
 private:
-	string name;
+	string name; 
 };
 

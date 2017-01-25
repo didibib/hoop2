@@ -1,0 +1,7 @@
+﻿  move_semantics.cpp
+c:\users\tariq bakhtali\documents\hku\hoop\hoop2\move_semantics\move_semantics\move_semantics.cpp(23): error C2440: '<function-style-cast>': cannot convert from 'Parent *' to 'Parent'
+  c:\users\tariq bakhtali\documents\hku\hoop\hoop2\move_semantics\move_semantics\move_semantics.cpp(23): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\tariq bakhtali\documents\hku\hoop\hoop2\move_semantics\move_semantics\move_semantics.cpp(23): error C2512: 'Parent': no appropriate default constructor available
+  c:\users\tariq bakhtali\documents\hku\hoop\hoop2\move_semantics\move_semantics\parent.h(10): note: see declaration of 'Parent'
+  Parent.cpp
+  Generating Code...
